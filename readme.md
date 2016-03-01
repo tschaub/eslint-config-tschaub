@@ -4,19 +4,21 @@ This package provides shareable [ESLint](http://eslint.org/) configurations for 
 
 ### Installation
 
-To make use of this config, install ESLint and this package as a development dependency of your project:
+To make use of this config, install ESLint (>= 2.0) and this package as a development dependency of your project:
 
     npm install eslint eslint-config-tschaub --save-dev
 
-Next, create a `.eslintrc` file at the root of your project.  At a minimum, this config file must include an `extends` member:
+Next, add an `eslintConfig` member to your project's `package.json`.  At a minimum, this config file must include an `extends` member:
 
 ```json
 {
-  "extends": "tschaub"
+  "eslintConfig": {
+    "extends": "tschaub"
+  }
 }
 ```
 
-See the ESLint [configuration guide](http://eslint.org/docs/user-guide/configuring) for details on additional configuration options.  Any rules configured in your `.eslintrc` file will override those provided by the `eslint-config-tschaub` package.
+See the ESLint [configuration guide](http://eslint.org/docs/user-guide/configuring) for details on additional configuration options.  Any rules configured in your `package.json` file will override those provided by the `eslint-config-tschaub` package.
 
 ### Use
 
@@ -36,15 +38,9 @@ With this `pretest` entry in your `package.json`, ESLint will run on all JavaScr
 
 See the ESLint [CLI guide](http://eslint.org/docs/user-guide/command-line-interface) for additional options when running ESLint.
 
-In addition to running the linter when your tests are run, you should configure your editor to run the linter as well.  For Sublime Text, install the [SublimeLinter-contrib-eslint](https://packagecontrol.io/packages/SublimeLinter-contrib-eslint) plugin.
+In addition to running the linter when your tests are run, you should configure your editor to run the linter as well.  See the [ESLint integration page](http://eslint.org/docs/user-guide/integrations#editors) to find details on configuring your editor to warn you of ESLint errors.
 
-The `SublimeLinter` plugin can be configured to show lint errors on save.  Edit your `SublimeLinter` user preferences to include the following:
-
-```json
-  {
-    "show_errors_on_save": true
-  }
-```
+See the [examples directory](https://github.com/tschaub/eslint-config-tschaub/tree/master/examples) for more usage examples.
 
 ### Profiles
 
@@ -54,10 +50,12 @@ The `eslint-config-tschaub` package includes a number of ESLint configuration pr
 
 The "base" config is suitable for Node projects or browser-based projects using a CommonJS module loader (e.g. [Browserify](http://browserify.org/) or [Webpack](http://webpack.github.io/)).
 
-Example `.eslintrc`:
+Example configuration in `package.json`:
 ```json
 {
-  "extends": "tschaub"
+  "eslintConfig": {
+    "extends": "tschaub"
+  }
 }
 ```
 
@@ -67,18 +65,20 @@ The `tschaub/react` config is suitable for projects using [React](https://facebo
 
     npm install eslint-plugin-react --save-dev
 
-Then your minimal `.eslintrc` would look like this:
+Then your minimal configuration in `package.json` would look like this:
 ```json
 {
-  "extends": "tschaub/react"
+  "eslintConfig": {
+    "extends": "tschaub/react"
+  }
 }
 ```
 
 ### Development
 
-To add another configuration profile, add a JSON file to the `config` directory (e.g. `config/new-config.json`).  This follows the format of an ESLint config file *except* that it does not have an `extends` property.  Add a script named like your profile to the root of the repository (e.g. `new-config.js`).  This script should merge the new configuration profile with whatever profile it extends.  Having the files structured this way allows consumers to use the new profile in their own `.eslintrc` files (e.g. with `"extends": "tschaub/new-config"`).
+To add another configuration profile, add a new config script to the root of the repository directory (e.g. `new-config.js`).  This script should export an ESLint config object and should have an `extends: './index.js' property`.  People using this config will add `extends/new-config` to their own ESLint config.
 
-You can add tests for your new profile or changes to an existing profile.  Ensure that tests pass with any changes.
+You should add and example for your new profile and ensure that tests pass with any changes.
 
     npm test
 
@@ -91,4 +91,4 @@ Publishing a new minor release would look like this:
     git push --tags origin master
     npm publish
 
-[![Current Status](https://secure.travis-ci.org/tschaub/eslint-config-tschaub.png?branch=master)](https://travis-ci.org/tschaub/eslint-config-tschaub)
+[![Build Status](https://travis-ci.org/tschaub/eslint-config-tschaub.svg?branch=master)](https://travis-ci.org/tschaub/eslint-config-tschaub)
