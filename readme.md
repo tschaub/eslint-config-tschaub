@@ -1,7 +1,5 @@
 ## eslint-config-tschaub
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/tschaub/eslint-config-tschaub.svg)](https://greenkeeper.io/)
-
 This package provides shareable [ESLint](http://eslint.org/) configurations for JavaScript projects that conform with my coding style.
 
 ### Installation
