@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tschaub",
-  "version": "6.0.0",
+  "version": "7.0.0",
   "description": "A shareable ESLint configuration",
   "main": "index.js",
   "repository": {
