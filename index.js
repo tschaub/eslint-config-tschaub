@@ -6,6 +6,13 @@ module.exports = {
     browser: true,
     es6: true
   },
+  parserOptions: {
+    ecmaVersion: '2017',
+    sourceType: 'module',
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
+    }
+  },
   rules: {
     'prettier/prettier': [2, {singleQuote: true, bracketSpacing: false}],
     'array-callback-return': 2,
@@ -47,6 +54,7 @@ module.exports = {
     'no-unsafe-finally': 2,
     'no-unused-vars': [2, {vars: 'all', args: 'none'}],
     'no-use-before-define': [2, 'nofunc'],
+    'prefer-const': 2,
     strict: 0,
     'use-isnan': 2,
     'valid-typeof': 2

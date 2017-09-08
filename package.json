@@ -11,7 +11,8 @@
     "url": "https://github.com/tschaub/eslint-config-tschaub/issues"
   },
   "scripts": {
-    "test": "npm run check-es6 && npm run check-react && eslint examples index.js react.js",
+    "lint": "eslint .",
+    "test": "npm run check-es6 && npm run check-react && npm run lint",
     "check-es6": "eslint --print-config examples/es6/.eslintrc | eslint-config-prettier-check",
     "check-react": "eslint --print-config examples/react/.eslintrc | eslint-config-prettier-check",
     "fix-examples": "eslint --fix examples"
@@ -23,11 +24,11 @@
     "prettier": "1.6.1"
   },
   "devDependencies": {
-    "eslint": "^3.19.0",
-    "eslint-plugin-react": "^7.0.0"
+    "eslint": "^4.6.1",
+    "eslint-plugin-react": "^7.3.0"
   },
   "peerDependencies": {
-    "eslint": ">= 3.0"
+    "eslint": ">= 4.6"
   },
   "eslintConfig": {
     "extends": "./index.js"

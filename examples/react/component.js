@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var HelloMessage = React.createClass({
+const HelloMessage = React.createClass({
   propTypes: {
     name: React.PropTypes.string.isRequired
   },
