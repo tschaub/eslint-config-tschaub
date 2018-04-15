@@ -1,5 +1,5 @@
 module.exports = {
-  extends: './index.js',
+  extends: ['./index.js', 'prettier/react'],
   plugins: ['react'],
   parserOptions: {
     ecmaFeatures: {
@@ -7,18 +7,21 @@ module.exports = {
     }
   },
   rules: {
-    'react/jsx-boolean-value': 2,
-    'react/jsx-no-undef': 2,
-    'react/jsx-sort-props': 2,
-    'react/jsx-uses-react': 2,
-    'react/jsx-uses-vars': 2,
-    'react/no-did-mount-set-state': 2,
-    'react/no-did-update-set-state': 2,
-    'react/no-multi-comp': 2,
-    'react/no-unknown-property': 2,
-    'react/prop-types': 2,
-    'react/react-in-jsx-scope': 2,
-    'react/self-closing-comp': 2,
-    'react/sort-prop-types': 2
+    'react/jsx-boolean-value': 'error',
+    'react/jsx-key': 'error',
+    'react/jsx-no-duplicate-props': 'error',
+    'react/jsx-no-undef': 'error',
+    'react/jsx-uses-react': 'error',
+    'react/jsx-uses-vars': 'error',
+    'react/no-array-index-key': 'error',
+    'react/no-children-prop': 'error',
+    'react/no-did-mount-set-state': 'error',
+    'react/no-did-update-set-state': 'error',
+    'react/no-direct-mutation-state': 'error',
+    'react/no-unescaped-entities': 'error',
+    'react/no-unknown-property': 'error',
+    'react/no-unused-prop-types': 'error',
+    'react/prop-types': 'error',
+    'react/react-in-jsx-scope': 'error'
   }
 };
