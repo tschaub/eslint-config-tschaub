@@ -54,6 +54,7 @@ module.exports = {
     'no-unsafe-finally': 2,
     'no-unused-vars': [2, {vars: 'all', args: 'none'}],
     'no-use-before-define': [2, 'nofunc'],
+    'no-var': 2,
     'prefer-const': 2,
     strict: 0,
     'use-isnan': 2,
