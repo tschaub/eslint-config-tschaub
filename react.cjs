@@ -1,16 +1,24 @@
 module.exports = {
-  extends: ['./index.js', 'prettier/react'],
-  plugins: ['react'],
+  extends: ['./index.cjs', 'prettier'],
+  plugins: ['react', 'react-hooks'],
   parserOptions: {
     ecmaFeatures: {
-      jsx: true
-    }
+      jsx: true,
+    },
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
   rules: {
+    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/rules-of-hooks': 'error',
     'react/jsx-boolean-value': 'error',
     'react/jsx-key': 'error',
     'react/jsx-no-duplicate-props': 'error',
     'react/jsx-no-undef': 'error',
+    'react/jsx-sort-props': 'off',
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
     'react/no-array-index-key': 'error',
@@ -21,7 +29,9 @@ module.exports = {
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
     'react/no-unused-prop-types': 'error',
+    'react/no-will-update-set-state': 'error',
     'react/prop-types': 'error',
-    'react/react-in-jsx-scope': 'error'
-  }
+    'react/react-in-jsx-scope': 'error',
+    'react/sort-prop-types': 'off',
+  },
 };

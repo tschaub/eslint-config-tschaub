@@ -1,0 +1,3 @@
+{
+  "extends": "../../index.cjs" // this would be "tschaub" in your config
+}
