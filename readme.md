@@ -1,10 +1,12 @@
+[![Build Status](https://github.com/tschaub/eslint-config-tschaub/workflows/Test/badge.svg)](https://github.com/tschaub/eslint-config-tschaub/actions?workflow=Test)
+
 ## eslint-config-tschaub
 
 This package provides shareable [ESLint](http://eslint.org/) configurations for JavaScript projects that conform with my coding style.
 
 ### Installation
 
-To make use of this config, install ESLint (>= 2.0) and this package as a development dependency of your project:
+To make use of this config, install ESLint (>= 8.0) and this package as a development dependency of your project:
 
     npm install eslint eslint-config-tschaub --save-dev
 
@@ -40,7 +42,7 @@ See the ESLint [CLI guide](http://eslint.org/docs/user-guide/command-line-interf
 
 In addition to running the linter when your tests are run, you should configure your editor to run the linter as well.  See the [ESLint integration page](http://eslint.org/docs/user-guide/integrations#editors) to find details on configuring your editor to warn you of ESLint errors.
 
-See the [examples directory](https://github.com/tschaub/eslint-config-tschaub/tree/master/examples) for more usage examples.
+See the [examples directory](https://github.com/tschaub/eslint-config-tschaub/tree/main/examples) for more usage examples.
 
 ### Profiles
 
@@ -61,9 +63,9 @@ Example configuration in `package.json`:
 
 #### `tschaub/react`
 
-The `tschaub/react` config is suitable for projects using [React](https://facebook.github.io/react/).  This extends the base config to include the React plugin, enable JSX parsing, and run React specific rules.  To use this profile, you'll need to install the `eslint-plugin-react` package:
+The `tschaub/react` config is suitable for projects using [React](https://reactjs.org/).  This extends the base config to include the React plugin, enable JSX parsing, and run React specific rules.  To use this profile, you'll need to install the `eslint-plugin-react` package:
 
-    npm install eslint-plugin-react --save-dev
+    npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
 
 Then your minimal configuration in `package.json` would look like this:
 ```json
@@ -88,7 +90,5 @@ Publishing a new minor release would look like this:
 
     # commit and push any changes first
     npm version minor # this bumps the package.json version number and tags
-    git push --tags origin master
+    git push --tags origin main
     npm publish
-
-[![Build Status](https://travis-ci.org/tschaub/eslint-config-tschaub.svg?branch=master)](https://travis-ci.org/tschaub/eslint-config-tschaub)
