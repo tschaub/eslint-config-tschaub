@@ -4,8 +4,8 @@
   "description": "A shareable ESLint configuration",
   "type": "module",
   "exports": {
-    "default": "./index.cjs",
-    "react": "./react.cjs"
+    ".": "./index.cjs",
+    "./react": "./react.cjs"
   },
   "files": [
     "index.cjs",
