@@ -2,8 +2,15 @@
   "name": "eslint-config-tschaub",
   "version": "14.0.0-beta.1",
   "description": "A shareable ESLint configuration",
-  "main": "index.js",
   "type": "module",
+  "exports": {
+    "default": "./index.cjs",
+    "react": "./react.cjs"
+  },
+  "files": [
+    "index.cjs",
+    "react.cjs"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/tschaub/eslint-config-tschaub.git"
