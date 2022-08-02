@@ -21,7 +21,6 @@ module.exports = {
     'import/extensions': ['error', 'always', {ignorePackages: true}],
     'jsdoc/check-access': 'error',
     'jsdoc/check-alignment': 'error',
-    'jsdoc/check-examples': 'error',
     'jsdoc/check-param-names': 'error',
     'jsdoc/check-property-names': 'error',
     'jsdoc/check-syntax': 'error',
