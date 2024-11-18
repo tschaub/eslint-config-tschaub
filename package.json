@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-tschaub",
-  "version": "14.1.2",
+  "version": "15.0.0-beta.1",
   "description": "A shareable ESLint configuration",
   "type": "module",
   "main": "index.js",
