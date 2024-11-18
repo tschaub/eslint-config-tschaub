@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/tschaub/eslint-config-tschaub/workflows/Test/badge.svg)](https://github.com/tschaub/eslint-config-tschaub/actions?workflow=Test)
+[![Build Status](https://github.com/tschaub/eslint-config-tschaub/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/tschaub/eslint-config-tschaub/actions?workflow=Test)
 
 ## eslint-config-tschaub
 

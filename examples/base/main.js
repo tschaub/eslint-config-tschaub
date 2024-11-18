@@ -1,10 +1,14 @@
-import name from './dep.js';
+import {readFile} from 'fs/promises';
 import {dirname, join} from 'path';
 import {fileURLToPath} from 'url';
-import {readFile} from 'fs/promises';
+import name from './dep.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+/**
+ * @param {Array<string>} paths A list of paths.
+ * @return {Promise<Array<string>>} A promise for the content of the files.
+ */
 function main(paths) {
   const promises = paths.map(async (name) => {
     const data = await readFile(name);
