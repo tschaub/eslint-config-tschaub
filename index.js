@@ -79,6 +79,7 @@ export default [
       'jsdoc/empty-tags': 'error',
       'jsdoc/implements-on-classes': 'error',
       'jsdoc/no-bad-blocks': 'error',
+      'jsdoc/no-undefined-types': 'off',
       'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
       'jsdoc/require-param': 'error',
       'jsdoc/require-param-description': 'error',
