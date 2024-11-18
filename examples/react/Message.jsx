@@ -2,7 +2,7 @@ import {string} from 'prop-types';
 import React from 'react';
 
 /**
- * @typedef {object} MessageProps
+ * @typedef {Object} MessageProps
  * @property {string} name The name.
  */
 

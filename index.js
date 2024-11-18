@@ -24,6 +24,7 @@ export default [
         preferredTypes: {
           '[]': 'Array<>',
           '.<>': '<>',
+          'object': 'Object',
         },
         tagNamePreference: {
           returns: 'return',
