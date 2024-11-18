@@ -1,3 +1,0 @@
-{
-  "extends": "../../react.cjs" // this would be "tschaub/react" in your config
-}
