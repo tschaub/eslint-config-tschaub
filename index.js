@@ -36,63 +36,10 @@ export default [
     },
 
     rules: {
+      // core
       'block-scoped-var': 'error',
       'curly': 'error',
       'default-case': 'error',
-      'import/no-unresolved': [
-        'error',
-        {
-          commonjs: true,
-        },
-      ],
-      'import/order': [
-        'error',
-        {
-          named: true,
-          alphabetize: {
-            order: 'asc',
-          },
-        },
-      ],
-      'import/no-duplicates': 'error',
-      'import/named': 'error',
-      'import/default': 'error',
-      'import/extensions': [
-        'error',
-        'always',
-        {
-          ignorePackages: true,
-        },
-      ],
-      'jsdoc/check-access': 'error',
-      'jsdoc/check-alignment': 'error',
-      'jsdoc/check-param-names': 'error',
-      'jsdoc/check-property-names': 'error',
-      'jsdoc/check-syntax': 'error',
-      'jsdoc/check-tag-names': [
-        'error',
-        {
-          definedTags: ['api', 'observable'],
-        },
-      ],
-      'jsdoc/check-types': 'error',
-      'jsdoc/empty-tags': 'error',
-      'jsdoc/implements-on-classes': 'error',
-      'jsdoc/no-bad-blocks': 'error',
-      'jsdoc/no-undefined-types': 'off',
-      'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
-      'jsdoc/require-param': 'error',
-      'jsdoc/require-param-description': 'error',
-      'jsdoc/require-param-name': 'error',
-      'jsdoc/require-param-type': 'error',
-      'jsdoc/require-property': 'error',
-      'jsdoc/require-property-description': 'error',
-      'jsdoc/require-property-name': 'error',
-      'jsdoc/require-property-type': 'error',
-      'jsdoc/require-returns': 'error',
-      'jsdoc/require-returns-check': 'error',
-      'jsdoc/require-returns-description': 'error',
-      'jsdoc/require-returns-type': 'error',
       'no-cond-assign': 'error',
       'no-console': 'error',
       'no-const-assign': 'error',
@@ -133,6 +80,69 @@ export default [
       'no-use-before-define': ['error', 'nofunc'],
       'no-var': 'error',
       'prefer-const': 'error',
+      'use-isnan': 'error',
+      'valid-typeof': 'error',
+
+      // import plugin
+      'import/no-unresolved': [
+        'error',
+        {
+          commonjs: true,
+        },
+      ],
+      'import/order': [
+        'error',
+        {
+          named: true,
+          alphabetize: {
+            order: 'asc',
+          },
+        },
+      ],
+      'import/no-duplicates': 'error',
+      'import/named': 'error',
+      'import/default': 'error',
+      'import/extensions': [
+        'error',
+        'always',
+        {
+          ignorePackages: true,
+        },
+      ],
+
+      // jsdoc plugin
+      'jsdoc/check-access': 'error',
+      'jsdoc/check-alignment': 'error',
+      'jsdoc/check-param-names': 'error',
+      'jsdoc/check-property-names': 'error',
+      'jsdoc/check-syntax': 'error',
+      'jsdoc/check-tag-names': [
+        'error',
+        {
+          definedTags: ['api', 'observable'],
+        },
+      ],
+      'jsdoc/check-types': 'error',
+      'jsdoc/empty-tags': 'error',
+      'jsdoc/implements-on-classes': 'error',
+      'jsdoc/no-bad-blocks': 'error',
+      'jsdoc/no-undefined-types': 'off',
+      'jsdoc/require-hyphen-before-param-description': ['error', 'never'],
+      'jsdoc/require-jsdoc': 'off',
+      'jsdoc/require-param': 'error',
+      'jsdoc/require-param-description': 'error',
+      'jsdoc/require-param-name': 'error',
+      'jsdoc/require-param-type': 'error',
+      'jsdoc/require-property': 'error',
+      'jsdoc/require-property-description': 'error',
+      'jsdoc/require-property-name': 'error',
+      'jsdoc/require-property-type': 'error',
+      'jsdoc/require-returns': 'error',
+      'jsdoc/require-returns-check': 'error',
+      'jsdoc/require-returns-description': 'error',
+      'jsdoc/require-returns-type': 'error',
+
+      // prettier plugin
       'prettier/prettier': [
         'error',
         {
@@ -141,8 +151,6 @@ export default [
           quoteProps: 'preserve',
         },
       ],
-      'use-isnan': 'error',
-      'valid-typeof': 'error',
     },
   },
 ];
