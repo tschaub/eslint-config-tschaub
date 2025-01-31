@@ -146,6 +146,7 @@ export default [
       'prettier/prettier': [
         'error',
         {
+          endOfLine: 'auto',
           singleQuote: true,
           bracketSpacing: false,
           quoteProps: 'preserve',
