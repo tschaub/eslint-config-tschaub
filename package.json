@@ -27,13 +27,10 @@
     "fix-examples": "eslint --fix examples"
   },
   "license": "MIT",
-  "eslintConfig": {
-    "extends": "./index.js"
-  },
   "devDependencies": {
-    "eslint": "^9.19.0",
-    "eslint-plugin-react": "^7.37.2",
-    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint": "^9.20.1",
+    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-react-hooks": "^5.1.0",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -41,9 +38,9 @@
   "dependencies": {
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jsdoc": "^50.5.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
-    "prettier": "^3.3.3"
+    "eslint-plugin-jsdoc": "^50.6.3",
+    "eslint-plugin-prettier": "^5.2.3",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.1"
   }
 }

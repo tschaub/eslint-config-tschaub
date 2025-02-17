@@ -10,17 +10,15 @@ To make use of this config, install ESLint (>= 8.0) and this package as a develo
 
     npm install eslint eslint-config-tschaub --save-dev
 
-Next, add an `eslintConfig` member to your project's `package.json`.  At a minimum, this config file must include an `extends` member:
+Next, add an `eslint.config.js` file to the root of your project.  At a minimum, this config file must include the following:
 
-```json
-{
-  "eslintConfig": {
-    "extends": "tschaub"
-  }
-}
+```js
+import config from 'eslint-config-tschaub';
+
+export default [...config];
 ```
 
-See the ESLint [configuration guide](http://eslint.org/docs/user-guide/configuring) for details on additional configuration options.  Any rules configured in your `package.json` file will override those provided by the `eslint-config-tschaub` package.
+See the ESLint [configuration guide](https://eslint.org/docs/latest/use/configure/) for details on additional configuration options.  Any rules configured in your `eslint.config.js` file will override those provided by the `eslint-config-tschaub` package.
 
 ### Use
 
@@ -38,9 +36,9 @@ With this `pretest` entry in your `package.json`, ESLint will run on all JavaScr
 
     npm test
 
-See the ESLint [CLI guide](http://eslint.org/docs/user-guide/command-line-interface) for additional options when running ESLint.
+See the ESLint [CLI guide](https://eslint.org/docs/latest/use/command-line-interface) for additional options when running ESLint.
 
-In addition to running the linter when your tests are run, you should configure your editor to run the linter as well.  See the [ESLint integration page](http://eslint.org/docs/user-guide/integrations#editors) to find details on configuring your editor to warn you of ESLint errors.
+In addition to running the linter when your tests are run, you should configure your editor to run the linter as well.  See the [ESLint integration page](https://eslint.org/docs/latest/use/integrations#editors) to find details on configuring your editor to warn you of ESLint errors.
 
 See the [examples directory](https://github.com/tschaub/eslint-config-tschaub/tree/main/examples) for more usage examples.
 
@@ -50,30 +48,26 @@ The `eslint-config-tschaub` package includes a number of ESLint configuration pr
 
 #### `tschaub` (base config)
 
-The "base" config is suitable for Node projects or browser-based projects using a CommonJS module loader (e.g. [Browserify](http://browserify.org/) or [Webpack](http://webpack.github.io/)).
+The "base" config is suitable for Node or browser-based projects.
 
-Example configuration in `package.json`:
-```json
-{
-  "eslintConfig": {
-    "extends": "tschaub"
-  }
-}
+Example configuration in `eslint.config.js`:
+```js
+import config from 'eslint-config-tschaub';
+
+export default [...config];
 ```
 
 #### `tschaub/react`
 
-The `tschaub/react` config is suitable for projects using [React](https://reactjs.org/).  This extends the base config to include the React plugin, enable JSX parsing, and run React specific rules.  To use this profile, you'll need to install the `eslint-plugin-react` package:
+The `tschaub/react` config is suitable for projects using [React](https://react.dev/).  This extends the base config to include the React plugin, enable JSX parsing, and run React specific rules.  To use this profile, you'll need to install the `eslint-plugin-react` and `eslint-plugin-react-hooks` packages:
 
     npm install --save-dev eslint-plugin-react eslint-plugin-react-hooks
 
-Then your minimal configuration in `package.json` would look like this:
+Then your minimal configuration in `eslint.config.js` would look like this:
 ```json
-{
-  "eslintConfig": {
-    "extends": "tschaub/react"
-  }
-}
+import config from 'eslint-config-tschaub/react';
+
+export default [...config];
 ```
 
 ### Development
